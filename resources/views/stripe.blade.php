@@ -28,7 +28,9 @@
   
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
+            <h1>Checkout</h1>
             <div class="panel panel-default credit-card-box">
+             
                 <div class="panel-heading display-table" >
                     <div class="row display-tr" >
                         <h3 class="panel-title display-td" >Payment Details</h3>
@@ -96,6 +98,9 @@
                             <div class="col-xs-12">
                                 <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now ${{ \Cart::getTotal() }}</button>
                             </div>
+                            <div class="col-xs-12">
+                                <a href="/cart" class="btn btn-lg btn-block" style="margin-top:20px;background-color:grey;color:white;">Return to cart </a>
+                            </div>
                         </div>
                           
                     </form>
@@ -156,6 +161,7 @@ $(function() {
         } else {
             // token contains id, last4, and card type
             var token = response['id'];
+            console.log(response);
             // insert the token into the form so it gets submitted to the server
             $form.find('input[type=text]').empty();
             $form.append("<input type='hidden' name='stripeToken' value='" + token + "'/>");

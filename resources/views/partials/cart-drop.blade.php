@@ -37,7 +37,7 @@
         <a class="btn btn-dark btn-sm btn-block" href="{{ route('cart.index') }}">
             CART <i class="fa fa-arrow-right"></i>
         </a>
-        <a class="btn btn-dark btn-sm btn-block" href="">
+        <a class="btn btn-dark btn-sm btn-block" href="/stripe">
             CHECKOUT <i class="fa fa-arrow-right"></i>
         </a>
     </div>
